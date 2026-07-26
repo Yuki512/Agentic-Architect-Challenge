@@ -6,9 +6,6 @@ Insert API key on env, then open bat file for each part
 ### System workflow (will explain later)
 ![Part 1 Workflow](diagram/part1_flow.png)
 
-
-
-
 ### Demo Result (Example 1 - Category - Billing)
 ![Part 1 Workflow](diagram/part1_demo1.png)
 The customer reports that the same order was charged twice.
@@ -77,3 +74,5 @@ The customer asks for a refund after 90 days for a product that was already used
 
 - **Final result: Human review required**  
   The customer is informed that the support team will review the case.
+
+  # 3. Part 2 Web Content Summarizer
