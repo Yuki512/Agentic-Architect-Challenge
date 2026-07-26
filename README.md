@@ -5,8 +5,6 @@ Insert API key on env, then open bat file for each part
 # 2. Part 1 Email Customer Support Agent
 ![Part 1 Workflow](diagram/Part1flow.png)
 
-### How Part 1 Works
-
 1. **Customer Email**  
    The system receives an email from the customer.
 
