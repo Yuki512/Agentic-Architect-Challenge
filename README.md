@@ -62,6 +62,7 @@ The customer reports that saved order information disappeared after the applicat
 
 ### (Example 3 - Reduce hallucination for refund policy)
 ![Part 1 Workflow](diagram/part1_demo3.png)
+The customer asks for a refund after 90 days for a product that was already used.
 - **Critical issue: No**  
   The request is not an emergency.
 
