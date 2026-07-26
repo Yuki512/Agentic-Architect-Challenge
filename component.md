@@ -13,3 +13,5 @@
 10. GroundedDraftSkill - Creates a customer reply using retrieved PDF information.
 11. RefundGuardrailSkill - Prevents refund claims that are not supported by the PDF.
 12. HumanReviewSkill - Prepares critical or unsupported cases for human review.
+## Tools
+13. PDFSearchTool - Searches the internal PDF.
