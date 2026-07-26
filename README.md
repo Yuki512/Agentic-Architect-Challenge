@@ -76,3 +76,4 @@ The customer asks for a refund after 90 days for a product that was already used
   The customer is informed that the support team will review the case.
 
   # 3. Part 2 Web Content Summarizer
+  ![Part 2 Workflow](diagram/part2_demo1.png)
