@@ -63,9 +63,6 @@ The customer reports that saved order information disappeared after the applicat
 - **Refund guardrail: Not used**  
   The email is not about a refund.
 
-- **FAQ evidence: Not used**  
-  The system skips PDF searching because possible data loss requires investigation by a person.
-
 - **Handoff summary**  
   The prototype creates a short internal summary containing the customer’s problem. A real system would send this summary to a support-ticket queue.
 
