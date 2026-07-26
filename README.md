@@ -1,9 +1,13 @@
 # 1. Initialize the system
 Insert API key on env, then open bat file for each part 
 
-### System workflow (will explain later)
+
 # 2. Part 1 Email Customer Support Agent
+### System workflow (will explain later)
 ![Part 1 Workflow](diagram/Part1flow.png)
+
+
+
 
 
 ![Part 1 Workflow](diagram/part1_demo1.png)
