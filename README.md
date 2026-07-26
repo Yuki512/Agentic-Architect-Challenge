@@ -28,7 +28,31 @@ The right panel shows how the email was processed:
 - **Response writer: DeepSeek**  
   DeepSeek wrote the customer reply.
 
-  ### (Example 2 - Data Lost)
+### (Example 2 -  Critical Data-Loss Issue)
+![Part 1 Workflow](diagram/part1_demo2.png)
+- **Critical issue: Yes**  
+  The system detects the phrase “data loss” as a serious issue.
+
+- **Category: Not used**  
+  The system stops the normal classification process.
+
+- **Subagent: HumanReview**  
+  The case is sent directly to human review.
+
+- **HumanReviewSkill**  
+  This skill prepares the customer’s issue for the support team.
+
+- **Response writer: Not used**  
+  DeepSeek does not create an automatic customer reply.
+
+- **Refund guardrail: Not used**  
+  This is not a refund request, and the normal process was skipped.
+
+- **FAQ evidence: Not used**  
+  The system does not search the FAQ because the critical issue requires immediate human attention.
+
+- **Final result: Human review required**  
+  The support team must investigate the possible data loss.
 
 ### (Example 3 - Reduce hallucination for refund policy)
 ![Part 1 Workflow](diagram/part1_demo3.png)
