@@ -3,9 +3,6 @@ Insert API key on env, then open bat file for each part
 
 
 # 2. Part 1 Email Customer Support Agent
-### System workflow (will explain later)
-![Part 1 Workflow](diagram/part1_flow.png)
-
 ### (Example 1 - Category - Billing)
 ![Part 1 Workflow](diagram/part1_demo1.png)
 The customer reports that the same order was charged twice.
