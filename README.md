@@ -63,29 +63,20 @@ The customer reports that saved order information disappeared after the applicat
 ### (Example 3 - Reduce hallucination for refund policy)
 ![Part 1 Workflow](diagram/part1_demo3.png)
 The customer asks for a refund after 90 days for a product that was already used.
-- **Critical issue: No**  
-  The request is not an emergency.
-
 - **Category: Refund**  
-  The system identifies it as a refund request.
+  The classifier identifies the email as a refund request.
+
+- **Critical issue: No**  
+  The email is not an emergency, so LangGraph continues through the normal process.
 
 - **Subagent: RefundSubagent**  
-  The refund agent processes the request.
-
-- **KnowledgeRetrievalSkill**  
-  The system searches the FAQ for the refund rules.
-
-- **GroundedDraftSkill**  
-  The system tries to prepare a reply using the available FAQ information.
+  LangGraph sends the case to the agent responsible for refund questions.
 
 - **Refund guardrail: Blocked**  
-  The FAQ does not support promising a refund after 90 days for a used product.
+  The PDF supports refunds within 30 days for unused products. It does not support this 90-day request for a used product.
 
-- **HumanReviewSkill**  
-  The case is prepared for the support team to review.
-
-- **Response writer: Human review template**  
-  A safe message is returned instead of DeepSeek guessing the refund policy.
+- **Final result: Human review required**  
+  The system does not promise a refund that is unsupported by the PDF.
 
 - **Final result: Human review required**  
   The customer is informed that the support team will review the case.
