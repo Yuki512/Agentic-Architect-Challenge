@@ -27,3 +27,34 @@ The right panel shows how the email was processed:
 
 - **Response writer: DeepSeek**  
   DeepSeek wrote the customer reply.
+
+  ### (Example 2 - Data Lost)
+
+### (Example 3 - Reduce hallucination for refund policy)
+![Part 1 Workflow](diagram/part1_demo3.png)
+- **Critical issue: No**  
+  The request is not an emergency.
+
+- **Category: Refund**  
+  The system identifies it as a refund request.
+
+- **Subagent: RefundSubagent**  
+  The refund agent processes the request.
+
+- **KnowledgeRetrievalSkill**  
+  The system searches the FAQ for the refund rules.
+
+- **GroundedDraftSkill**  
+  The system tries to prepare a reply using the available FAQ information.
+
+- **Refund guardrail: Blocked**  
+  The FAQ does not support promising a refund after 90 days for a used product.
+
+- **HumanReviewSkill**  
+  The case is prepared for the support team to review.
+
+- **Response writer: Human review template**  
+  A safe message is returned instead of DeepSeek guessing the refund policy.
+
+- **Final result: Human review required**  
+  The customer is informed that the support team will review the case.
