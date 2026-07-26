@@ -76,4 +76,45 @@ The customer asks for a refund after 90 days for a product that was already used
   The customer is informed that the support team will review the case.
 
 # 3. Part 2 Web Content Summarizer
+### Demo: Summarizing a Long Wikipedia Page
 ![Part 2 Workflow](diagram/part2_demo1.png)
+
+The user provides a public webpage, a summary focus and a maximum word limit.
+
+In this example, the user asks the system to list Tsuna and the six Vongola Guardians from a Wikipedia page.
+
+- **HTTP status: 200**  
+  The webpage was downloaded successfully.
+
+- **Downloaded: 66.2 KB**  
+  This is the size of the downloaded webpage.
+
+- **Useful content: 8,299 words**  
+  The system removes menus, scripts, advertisements and other unnecessary webpage content.
+
+- **Chunks: 52**  
+  The cleaned content is divided into 52 smaller sections so it can be processed more easily.
+
+- **WebsiteScraperTool**  
+  Downloads the HTML from the public webpage.
+
+- **UsefulContentCleaner**  
+  Removes unnecessary webpage elements and keeps useful text.
+
+- **LongContentChunkingSkill**  
+  Divides the long text into smaller content chunks.
+
+- **DeepSeekLLMSummarizationSkill**  
+  DeepSeek reads the useful content and creates a summary based on the requested focus.
+
+- **ConciseSummaryGuardrail**  
+  Checks that the summary follows the maximum word limit and does not contain unsupported information.
+
+- **Guardrail: Passed**  
+  The generated summary passed the final checks.
+
+- **Summarizer: DeepSeek**  
+  DeepSeek successfully generated the summary.
+
+- **Final result: Summary ready**  
+  The final result contains 95 words, which is below the requested maximum of 200 words.
