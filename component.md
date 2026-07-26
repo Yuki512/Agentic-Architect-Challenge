@@ -9,6 +9,6 @@
 06. AccountSubagent - Handles login, password, profile and privacy questions.
 07. ShippingSubagent - Handles delivery, tracking and package questions.
 08. FeedbackSubagent - Handles suggestions, complaints and feedback.
-
+## Skill
 09. KnowledgeRetrievalSkill - Finds relevant information from the internal PDF.
 10. GroundedDraftSkill - Creates a customer reply using retrieved PDF information.
