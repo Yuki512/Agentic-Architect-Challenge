@@ -9,7 +9,7 @@ Insert API key on env, then open bat file for each part
 
 
 
-### Demo Result 
+### Demo Result (Example 1)
 ![Part 1 Workflow](diagram/part1_demo1.png)
 The right panel shows how the email was processed:
 
