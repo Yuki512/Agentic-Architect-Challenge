@@ -1,6 +1,5 @@
-# System Components
-## Part 1: Support Email Agent
-
+# Part 1: Support Email Agent
+## Workflow and Agent
 01. LangGraph - Connects the nodes, passes state and selects the next step.
 02. Router Agent - Reads the email and selects its category.
 03. BillingSubagent - Handles charges, payments, invoices and receipts.
