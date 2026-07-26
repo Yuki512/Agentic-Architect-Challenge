@@ -11,7 +11,7 @@ Insert API key on env, then open bat file for each part
 
 ### Demo Result (Example 1 - Category - Billing)
 ![Part 1 Workflow](diagram/part1_demo1.png)
-The right panel shows how the email was processed:
+The customer reports that the same order was charged twice.
 - **Critical issue: No**  
   The request is not a critical issue, so it continues through the normal process.
 
