@@ -12,21 +12,34 @@ Insert API key on env, then open bat file for each part
 ### Demo Result (Example 1)
 ![Part 1 Workflow](diagram/part1_demo1.png)
 The right panel shows how the email was processed:
-
-- **Status: Draft ready**  
-  The system successfully prepared a reply.
-
 - **Critical issue: No**  
-  The email was not serious, so it did not require human review.
+  The request is not a critical issue, so it continues through the normal process.
 
-- **Category: Refund**  
-  The system identified the email as a refund request.
+- **Category: Billing**  
+  The system identifies the email as a billing problem.
 
-- **Subagent: RefundSubagent**  
-  The refund agent was selected to handle the request.
+- **Subagent: BillingSubagent**  
+  The billing agent is selected to handle the request.
+
+- **KnowledgeRetrievalSkill**  
+  The system searches the internal FAQ for information about duplicate charges.
+
+- **GroundedDraftSkill**  
+  DeepSeek prepares a reply using the billing information found in the FAQ.
+
+- **Refund guardrail: Not applied**  
+  The email is classified as billing rather than a refund request.
 
 - **Response writer: DeepSeek**  
-  DeepSeek wrote the customer reply.
+  DeepSeek asks the customer for the information needed to check both charges.
+
+- **FAQ evidence**  
+  The billing FAQ explains what information to collect and how duplicate charges are handled.
+
+- **Final result: Draft ready**  
+  The system prepares a reply for the customer.
+
+
 
 ### (Example 2 -  Critical Data-Loss Issue)
 ![Part 1 Workflow](diagram/part1_demo2.png)
