@@ -30,12 +30,6 @@ The right panel shows how the email was processed:
 - **Refund guardrail: Not applied**  
   The email is classified as billing rather than a refund request.
 
-- **Response writer: DeepSeek**  
-  DeepSeek asks the customer for the information needed to check both charges.
-
-- **FAQ evidence**  
-  The billing FAQ explains what information to collect and how duplicate charges are handled.
-
 - **Final result: Draft ready**  
   The system prepares a reply for the customer.
 
@@ -56,9 +50,6 @@ The customer reports that saved order information disappeared after the applicat
 
 - **HumanReviewSkill**  
   This skill prepares the case information for the support team.
-
-- **Response writer: Not used**  
-  DeepSeek does not write an automatic reply for this critical case.
 
 - **Refund guardrail: Not used**  
   The email is not about a refund.
