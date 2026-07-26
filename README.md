@@ -1,3 +1,3 @@
-# 1. Insert API key on env, then open bat file for each part 
-
+# 1. Initialize the system
+Insert API key on env, then open bat file for each part 
 
