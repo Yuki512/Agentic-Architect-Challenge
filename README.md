@@ -6,7 +6,7 @@ Insert API key on env, then open bat file for each part
 ### System workflow (will explain later)
 ![Part 1 Workflow](diagram/part1_flow.png)
 
-### Demo Result (Example 1 - Category - Billing)
+### (Example 1 - Category - Billing)
 ![Part 1 Workflow](diagram/part1_demo1.png)
 The customer reports that the same order was charged twice.
 - **Critical issue: No**  
