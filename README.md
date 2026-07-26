@@ -41,28 +41,33 @@ The right panel shows how the email was processed:
 
 
 
-### (Example 2 -  Critical Data-Loss Issue)
+### (Example 2 -  Critical Technical Issue)
 ![Part 1 Workflow](diagram/part1_demo2.png)
-- **Critical issue: Yes**  
-  The system detects the phrase “data loss” as a serious issue.
+The customer reports that saved order information disappeared after the application crashed.
 
-- **Category: Not used**  
-  The system stops the normal classification process.
+- **Category: Technical**  
+  The system first identifies the email as a technical issue.
+
+- **Critical issue: Yes**  
+  The words “data loss” show that the problem is serious.
 
 - **Subagent: HumanReview**  
-  The case is sent directly to human review.
+  Although the category is Technical, the system does not send it through the normal TechnicalSubagent process. Critical cases go directly to human review.
 
 - **HumanReviewSkill**  
-  This skill prepares the customer’s issue for the support team.
+  This skill prepares the case information for the support team.
 
 - **Response writer: Not used**  
-  DeepSeek does not create an automatic customer reply.
+  DeepSeek does not write an automatic reply for this critical case.
 
 - **Refund guardrail: Not used**  
-  This is not a refund request, and the normal process was skipped.
+  The email is not about a refund.
 
 - **FAQ evidence: Not used**  
-  The system does not search the FAQ because the critical issue requires immediate human attention.
+  The system skips PDF searching because possible data loss requires investigation by a person.
+
+- **Handoff summary**  
+  The prototype creates a short internal summary containing the customer’s problem. A real system would send this summary to a support-ticket queue.
 
 - **Final result: Human review required**  
   The support team must investigate the possible data loss.
