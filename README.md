@@ -52,7 +52,7 @@ The customer reports that saved order information disappeared after the applicat
   The words “data loss” show that the problem is serious.
 
 - **Subagent: HumanReview**  
-  Although the category is Technical, the system does not send it through the normal TechnicalSubagent process. Critical cases go directly to human review.
+ Critical cases go directly to human review.
 
 - **HumanReviewSkill**  
   This skill prepares the case information for the support team.
