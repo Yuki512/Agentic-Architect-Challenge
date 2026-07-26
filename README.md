@@ -76,7 +76,4 @@ The customer asks for a refund after 90 days for a product that was already used
   The PDF supports refunds within 30 days for unused products. It does not support this 90-day request for a used product.
 
 - **Final result: Human review required**  
-  The system does not promise a refund that is unsupported by the PDF.
-
-- **Final result: Human review required**  
   The customer is informed that the support team will review the case.
