@@ -2,7 +2,7 @@
 Insert API key on env, then open bat file for each part 
 
 
-# 2. Part 1 Email Support Agent
+# 2. Part 1  System Design & Critical Thinking
 ### (Example 1 - Category - Billing)
 ![Part 1 Workflow](diagram/part1_demo1.png)
 The customer reports that the same order was charged twice.
@@ -72,7 +72,7 @@ The customer asks for a refund after 90 days for a product that was already used
 - **Final result: Human review required**  
   The customer is informed that the support team will review the case.
 
-# 3. Part 2 Web Content Summarizer
+# 3. Part 2 Technical Implementation
 ### Demo: Summarizing a Long Wikipedia Page
 ![Part 2 Workflow](diagram/part2_demo1.png)
 
@@ -115,3 +115,5 @@ In this example, the user asks the system to list Tsuna and the six Vongola Guar
 
 - **Final result: Summary ready**  
   The final result contains 95 words, which is below the requested maximum of 200 words.
+
+# 3. Part 3 Practical Evaluation
