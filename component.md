@@ -23,3 +23,5 @@
 17. Critical Keyword Check - Detects explicit data loss, service outage, security breach or repeated contact.
 18. DeepSeek Meaning Check - Detects serious issues written using different words.
 19. Refund Guardrail - Blocks refund replies that are unsupported by the PDF.
+
+# Part 2: Support Email Agent
