@@ -42,4 +42,18 @@
 2. DocumentAgent - Answers questions using the sample policy PDF, conversation history and optional tools.
 3. DeepSeek - Reads the question, prepares the answer and decides whether a calculator or date tool is required.
 ## Skill
+4. ConversationMemorySkill - Remembers recent messages and the user’s name.
+5. PDFRetrievalSkill - Uses BM25 search to find relevant sections from the policy PDF.
+6. PolicyAnsweringSkill - Creates an answer using the question, conversation history and retrieved PDF information
+7. ToolSelectionSkill - Decides whether the calculator or date tool is needed.
+8. AnswerCheckSkill - Checks that policy information in the answer is supported by the PDF.
+9. AnswerRepairSkill - Attempts to repair an answer when its source reference is missing.
+## Tool
+10. Calculator Tool
+11. Date Tool - Gets today’s date, adds days to a date or calculates days between dates.
+# Storage and Processing Components
+12. PDF Loader - Reads the sample policy PDF and divides it into sections.
+13. BM25 Document Retriever - Finds PDF sections related to the user’s question
+14. SQLite Checkpointer - Stores conversation messages and state using a thread ID.
+15. Conversation Thread ID - Keeps each conversation separate.
 
