@@ -1,4 +1,4 @@
-# Part 1: Support Email Agent
+# Part 1: System Design & Critical Thinking
 ## Workflow and Agent
 ![Part 1 Workflow](diagram/part1_flow.png)
 01. LangGraph - Connects the nodes, passes state and selects the next step.
@@ -24,7 +24,7 @@
 18. DeepSeek Meaning Check - Detects serious issues written using different words.
 19. Refund Guardrail - Blocks refund replies that are unsupported by the PDF.
 
-# Part 2: Web Content Summarizer
+# Part 2:  Technical Implementation
 ## Workflow and Skill
 ![Part 2 Workflow](diagram/part2_flow.png)
 1. LongContentChunkingSkill - Divides long webpage text into smaller sections.
