@@ -15,3 +15,7 @@
 12. HumanReviewSkill - Prepares critical or unsupported cases for human review.
 ## Tools
 13. PDFSearchTool - Searches the internal PDF.
+14. DaftBuilderTool - Builds a customer-facing reply.
+15. RefundEvidenceCheckTool - Checks refund statements against PDF information.
+16. HumanHandoffTool - Creates an internal ticket for the support team.
+## Checks and Guardrails
