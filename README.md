@@ -117,3 +117,4 @@ In this example, the user asks the system to list Tsuna and the six Vongola Guar
   The final result contains 95 words, which is below the requested maximum of 200 words.
 
 # 3. Part 3 Practical Evaluation
+![Part 3 Workflow](diagram/part3_demo.png)
