@@ -4,6 +4,7 @@ Insert API key on env, then open bat file for each part
 - `open_part(x).bat` — Opens the UI.
 - `.env.example` — Rename it to `.env` and insert your API key. The default provider is DeepSeek.
 - `Architecture_Document.pdf` — A one-page brief covering the architecture, trade-offs, and potential failures.
+- `Component md` — Include the agent, skill and tool that i used on exercise.
 
 # 2. Part 1  System Design & Critical Thinking
 ### (Example 1 - Category - Billing)
