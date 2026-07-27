@@ -38,7 +38,7 @@
 
 # Part 3: Practical Evaluation
 ## Workflow and Agent
-![Part 3 Workflow](diagram/part3_flow.png)
+![Part 3 Workflow](diagram/part3_flow1.png)
 1. LangGraph - Controls the nodes, passes conversation state and handles tool routes.
 2. DocumentAgent - Answers questions using the sample policy PDF, conversation history and optional tools.
 3. DeepSeek - Reads the question, prepares the answer and decides whether a calculator or date tool is required.
