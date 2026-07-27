@@ -1,6 +1,9 @@
 # 1. Initialize the system
 Insert API key on env, then open bat file for each part 
 
+open_part(x).bat - open UI
+env.example - change to env and insert api (defaut is deepseek)
+Architecture_Document - 1 page briefing include architectire, trade off and potential failure.
 
 # 2. Part 1  System Design & Critical Thinking
 ### (Example 1 - Category - Billing)
