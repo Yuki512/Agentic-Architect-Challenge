@@ -26,7 +26,7 @@
 
 # Part 2: Web Content Summarizer
 ## Workflow and Skill
-![Part 1 Workflow](diagram/part2_flow.png)
+![Part 2 Workflow](diagram/part2_flow.png)
 1. LongContentChunkingSkill - Divides long webpage text into smaller sections.
 2. DeepSeekLLMSummarizationSkill - Uses DeepSeek to create a focused summary.
 3. GroundedSummarizationSkill - Creates a rule-based summary without an LLM API.
