@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Support Email Agent</title>
+    <script>
+      (() => {
+        try {
+          const savedTheme = localStorage.getItem("support-agent-theme");
+          const preferredTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+          document.documentElement.dataset.theme =
+            savedTheme === "dark" || savedTheme === "light" ? savedTheme : preferredTheme;
+        } catch {
+          document.documentElement.dataset.theme = "light";
+        }
+      })();
+    </script>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="chat-panel" aria-label="Support email chat">
+        <header class="chat-header">
+          <div>
+            <p class="eyebrow">Part 1 Prototype</p>
+            <h1>Support Email Agent</h1>
+          </div>
+          <div class="header-actions">
+            <select id="exampleSelect" aria-label="Sample email">
+              <option value="">Custom email</option>
+            </select>
+            <button
+              id="themeToggle"
+              class="theme-toggle"
+              type="button"
+              aria-label="Switch theme"
+              title="Switch theme"
+            >
+              <svg class="theme-icon moon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"></path>
+              </svg>
+              <svg class="theme-icon sun" viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="12" cy="12" r="4"></circle>
+                <path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"></path>
+              </svg>
+            </button>
+          </div>
+        </header>
+
+        <section id="chatMessages" class="chat-messages" aria-live="polite">
+          <article class="message assistant">
+            <div class="avatar">A</div>
+            <div class="bubble">
+              <strong>Support Agent</strong>
+              <p>Paste a customer support email below, or choose a sample case. I will process it through the critical gate, router, subagent, skills, tools, and guardrails.</p>
+            </div>
+          </article>
+        </section>
+
+        <section class="composer" aria-label="Email composer">
+          <div class="composer-meta">
+            <label>
+              <span>Customer</span>
+              <input id="customerName" type="text" value="Alicia Tan">
+            </label>
+            <label>
+              <span>Contacts in 7 days</span>
+              <input id="contactCount" type="number" min="0" step="1" value="1">
+            </label>
+          </div>
+          <label class="subject-line">
+            <span>Subject</span>
+            <input id="subject" type="text" value="Can I return my order?">
+          </label>
+          <div class="composer-box">
+            <textarea id="body" aria-label="Customer email body">Hi, I received my order 10 days ago. The item is unused and still in the original packaging. Can I return it for a refund?</textarea>
+            <button id="processButton" class="send-button" type="button">Send</button>
+          </div>
+          <p id="errorMessage" class="error" role="alert"></p>
+        </section>
+      </section>
+
+      <aside class="proof-panel" aria-label="Pipeline proof">
+        <header class="proof-header">
+          <div>
+            <p class="eyebrow">Pipeline Proof</p>
+            <h2 id="statusTitle">Waiting</h2>
+          </div>
+          <span id="statusBadge" class="badge neutral">Ready</span>
+        </header>
+
+        <section class="metrics">
+          <div>
+            <span>Critical issue</span>
+            <strong id="criticalValue">-</strong>
+          </div>
+          <div>
+            <span>Category</span>
+            <strong id="categoryValue">-</strong>
+            <small id="routerNote" class="metric-note"></small>
+          </div>
+          <div>
+            <span>Subagent</span>
+            <strong id="subagentValue">-</strong>
+          </div>
+          <div>
+            <span>Refund guardrail</span>
+            <strong id="guardrailValue">-</strong>
+          </div>
+          <div class="metric-wide">
+            <span>Response writer</span>
+            <strong id="writerValue">-</strong>
+            <small id="writerNote" class="metric-note" hidden></small>
+          </div>
+        </section>
+
+        <section class="proof-section">
+          <h3>Skills used</h3>
+          <div id="skillsList" class="stack muted">No skills selected yet.</div>
+        </section>
+
+        <section class="proof-section">
+          <h3>FAQ evidence</h3>
+          <div id="evidenceList" class="stack muted">No evidence yet.</div>
+        </section>
+      </aside>
+    </main>
+    <script src="/app.js"></script>
+  </body>
+</html>

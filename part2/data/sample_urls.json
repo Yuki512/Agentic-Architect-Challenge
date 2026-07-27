@@ -1,0 +1,8 @@
+[
+  {
+    "case_id": "WEB-2001",
+    "url": "https://en.wikipedia.org/wiki/Reborn!",
+    "focus": "Summarize the manga, publication history, main story, and adaptations.",
+    "max_summary_words": 100
+  }
+]

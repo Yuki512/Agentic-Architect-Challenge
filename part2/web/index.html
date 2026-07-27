@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Web Content Summarizer</title>
+    <script>
+      (() => {
+        try {
+          const savedTheme = localStorage.getItem("web-summary-theme");
+          const preferredTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+          document.documentElement.dataset.theme =
+            savedTheme === "dark" || savedTheme === "light" ? savedTheme : preferredTheme;
+        } catch {
+          document.documentElement.dataset.theme = "light";
+        }
+      })();
+    </script>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="workspace" aria-label="Web content summarizer">
+        <header class="app-header">
+          <div>
+            <p class="eyebrow">Part 2 Prototype</p>
+            <h1>Web Content Summarizer</h1>
+          </div>
+          <div class="header-actions">
+            <select id="exampleSelect" aria-label="Sample URL">
+              <option value="">Custom URL</option>
+            </select>
+            <button
+              id="themeToggle"
+              class="theme-toggle"
+              type="button"
+              aria-label="Switch theme"
+              title="Switch theme"
+            >
+              <svg class="theme-icon moon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"></path>
+              </svg>
+              <svg class="theme-icon sun" viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="12" cy="12" r="4"></circle>
+                <path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"></path>
+              </svg>
+            </button>
+          </div>
+        </header>
+
+        <form id="requestForm" class="request-form">
+          <label class="url-field">
+            <span>Public webpage URL</span>
+            <input
+              id="urlInput"
+              type="url"
+              placeholder="https://example.com/article"
+              autocomplete="url"
+              required
+            >
+          </label>
+
+          <div class="request-options">
+            <label>
+              <span>Summary focus</span>
+              <input
+                id="focusInput"
+                type="text"
+                placeholder="Main ideas, benefits, and applications"
+                required
+              >
+            </label>
+            <label>
+              <span>Maximum words</span>
+              <input
+                id="maxWordsInput"
+                type="number"
+                min="40"
+                max="250"
+                step="10"
+                value="120"
+                required
+              >
+            </label>
+          </div>
+
+          <div class="form-actions">
+            <p id="errorMessage" class="error" role="alert"></p>
+            <button id="processButton" class="primary-button" type="submit">
+              Scrape &amp; summarize
+            </button>
+          </div>
+        </form>
+
+        <section class="summary-area" aria-live="polite">
+          <header class="summary-header">
+            <div>
+              <p class="eyebrow">Grounded Summary</p>
+              <h2 id="pageTitle">No summary yet</h2>
+            </div>
+            <span id="summaryCount" class="word-count">0 words</span>
+          </header>
+          <a id="sourceLink" class="source-link" hidden></a>
+          <ul id="summaryPoints" class="summary-points empty">
+            <li>Summary output will appear here.</li>
+          </ul>
+        </section>
+      </section>
+
+      <aside class="proof-panel" aria-label="Processing proof">
+        <header class="proof-header">
+          <div>
+            <p class="eyebrow">Processing Proof</p>
+            <h2 id="statusTitle">Waiting</h2>
+          </div>
+          <span id="statusBadge" class="badge neutral">Ready</span>
+        </header>
+
+        <section class="metrics">
+          <div>
+            <span>HTTP status</span>
+            <strong id="httpValue">-</strong>
+          </div>
+          <div>
+            <span>Downloaded</span>
+            <strong id="downloadValue">-</strong>
+          </div>
+          <div>
+            <span>Useful content</span>
+            <strong id="cleanValue">-</strong>
+          </div>
+          <div>
+            <span>Chunks</span>
+            <strong id="chunkValue">-</strong>
+          </div>
+          <div class="metric-wide">
+            <span>Concise guardrail</span>
+            <strong id="guardrailValue">-</strong>
+          </div>
+          <div class="metric-wide">
+            <span>Summarizer</span>
+            <strong id="providerValue">-</strong>
+            <small id="providerNote" class="metric-note" hidden></small>
+          </div>
+        </section>
+
+        <section class="proof-section">
+          <h3>Components used</h3>
+          <div id="componentsList" class="stack muted">No components used yet.</div>
+        </section>
+
+        <section class="proof-section">
+          <h3>Content chunks</h3>
+          <div id="chunksList" class="stack muted">No chunks yet.</div>
+        </section>
+      </aside>
+    </main>
+    <script src="/app.js"></script>
+  </body>
+</html>

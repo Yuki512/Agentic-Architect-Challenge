@@ -1,0 +1,102 @@
+{
+  "title": "Nimbus Travel & Expense Policy",
+  "subtitle": "Employee business travel and reimbursement standard",
+  "policy_id": "NIM-FIN-TRV-2026-01",
+  "effective_date": "1 July 2026",
+  "owner": "Finance Operations",
+  "version": "1.0",
+  "principle": "Spend responsibly, obtain approval before booking, and submit complete claims promptly.",
+  "sections": [
+    {
+      "number": 1,
+      "title": "Purpose and scope",
+      "paragraphs": [
+        "This policy applies to Nimbus employees travelling for approved company business. Contractors may claim travel costs only when their written agreement explicitly allows reimbursement.",
+        "Nimbus reimburses reasonable and necessary business expenses supported by this policy. Personal costs are the traveller's responsibility."
+      ]
+    },
+    {
+      "number": 2,
+      "title": "Approval before travel",
+      "bullets": [
+        "All international travel requires written manager approval before any booking is made.",
+        "Domestic travel with an estimated total cost above S$1,500 requires written manager approval before booking.",
+        "Approval requests should be submitted at least 5 business days before departure.",
+        "Retroactive approval is not permitted except for documented emergencies covered by Section 7."
+      ]
+    },
+    {
+      "number": 3,
+      "title": "Accommodation limits",
+      "paragraphs": [
+        "The nightly limits below cover the room rate only. Taxes and mandatory hotel fees may be claimed separately when supported by the hotel invoice."
+      ],
+      "table": {
+        "headers": ["Destination", "Maximum room rate"],
+        "rows": [
+          ["Singapore", "S$240 per night"],
+          ["Major international city", "USD220 per night"],
+          ["Other international destination", "USD160 per night"]
+        ]
+      },
+      "bullets": [
+        "A major international city is a destination listed as high-cost by Finance at the time of booking.",
+        "A room above the applicable limit requires written approval from both the traveller's manager and Finance before booking."
+      ]
+    },
+    {
+      "number": 4,
+      "title": "Meals and incidentals",
+      "table": {
+        "headers": ["Travel type", "Daily maximum"],
+        "rows": [
+          ["Travel within Singapore", "S$80 per day"],
+          ["International travel", "USD75 per day"]
+        ]
+      },
+      "bullets": [
+        "The daily maximum includes meals, non-alcoholic drinks, and reasonable gratuities.",
+        "Alcohol is not reimbursable.",
+        "Meals provided by a conference, hotel, airline, or host may not be claimed again."
+      ]
+    },
+    {
+      "number": 5,
+      "title": "Transportation",
+      "bullets": [
+        "Air and rail travel must use economy class and the lowest logical fare that meets the approved itinerary.",
+        "Use of a personal vehicle is reimbursed at S$0.70 per business kilometre.",
+        "Fuel may not be claimed separately when personal-vehicle mileage is reimbursed.",
+        "Public transport, taxis, and ride-hailing services are reimbursable at actual cost when used for a reasonable business route."
+      ]
+    },
+    {
+      "number": 6,
+      "title": "Receipts and claim deadlines",
+      "bullets": [
+        "An itemised receipt is required for any single expense above S$25 or the equivalent in another currency.",
+        "An expense claim must be submitted within 10 calendar days after the traveller's return date.",
+        "For example, a traveller who returns on 10 August 2026 must submit the claim by 20 August 2026.",
+        "Foreign-currency claims must use the card provider's posted conversion or the Finance exchange rate for the transaction date."
+      ]
+    },
+    {
+      "number": 7,
+      "title": "Exceptions and emergencies",
+      "bullets": [
+        "A planned exception requires written approval from both the traveller's manager and Finance before the expense is incurred.",
+        "For an unplanned safety or medical emergency, the traveller must notify their manager within 24 hours when reasonably possible.",
+        "Emergency claims must include an explanation and available supporting evidence. Finance may reject unsupported amounts."
+      ]
+    },
+    {
+      "number": 8,
+      "title": "Non-reimbursable costs and assistance",
+      "bullets": [
+        "Personal upgrades, minibar purchases, traffic or parking fines, companion travel, childcare, and lost personal property are not reimbursable.",
+        "Questions should be sent to travel@nimbus.example before booking or submitting a claim.",
+        "If local law conflicts with this policy, local law applies and Finance must review the claim."
+      ]
+    }
+  ]
+}

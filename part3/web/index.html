@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Nimbus Policy Agent</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="app-header">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true">N</span>
+      <div>
+        <strong>Nimbus Policy Agent</strong>
+        <span>Travel and expense guidance</span>
+      </div>
+    </div>
+    <div class="header-actions">
+      <span class="status-indicator" id="connection-status">
+        <span class="status-dot" aria-hidden="true"></span>
+        Connecting
+      </span>
+      <button class="button secondary" id="new-thread" type="button">
+        New conversation
+      </button>
+      <button class="icon-button" id="theme-toggle" type="button"
+              title="Change color theme" aria-label="Change color theme">
+        <span aria-hidden="true">&#9788;</span>
+      </button>
+    </div>
+  </header>
+
+  <nav class="mobile-tabs" aria-label="Workspace panels">
+    <button class="mobile-tab active" data-panel="chat" type="button">Chat</button>
+    <button class="mobile-tab" data-panel="document" type="button">Document</button>
+    <button class="mobile-tab" data-panel="trace" type="button">Trace</button>
+  </nav>
+
+  <main class="workspace">
+    <section class="panel document-panel" data-panel-name="document"
+             aria-labelledby="document-heading">
+      <div class="panel-header">
+        <div>
+          <span class="eyebrow">Source document</span>
+          <h2 id="document-heading">Nimbus policy</h2>
+        </div>
+        <a class="icon-button" href="/document" target="_blank"
+           title="Open policy PDF" aria-label="Open policy PDF">
+          <span aria-hidden="true">&#8599;</span>
+        </a>
+      </div>
+      <div class="document-meta">
+        <span>2 pages</span>
+        <span>Internal policy</span>
+      </div>
+      <iframe class="document-frame" src="/document#page=1&view=FitH"
+              title="Nimbus Travel and Expense Policy"></iframe>
+    </section>
+
+    <section class="panel chat-panel active" data-panel-name="chat"
+             aria-labelledby="chat-heading">
+      <div class="panel-header chat-header">
+        <div>
+          <span class="eyebrow">Grounded assistant</span>
+          <h1 id="chat-heading">Ask the policy</h1>
+        </div>
+        <div class="chat-actions">
+          <span class="memory-label" id="memory-label">No saved name</span>
+          <button class="icon-button danger" id="clear-thread" type="button"
+                  title="Clear this conversation"
+                  aria-label="Clear this conversation">
+            <span aria-hidden="true">&#10005;</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="messages" id="messages" aria-live="polite">
+        <article class="message assistant">
+          <div class="avatar" aria-hidden="true">N</div>
+          <div class="message-content">
+            <div class="message-meta">Nimbus agent</div>
+            <p>I can answer questions using the Nimbus Travel and Expense
+              Policy, remember your name, and calculate policy totals.</p>
+          </div>
+        </article>
+        <div class="starter-prompts" id="starter-prompts">
+          <button type="button">What is the Singapore hotel limit?</button>
+          <button type="button">Do I need a receipt for S$40?</button>
+          <button type="button">What is the mileage rate?</button>
+        </div>
+      </div>
+
+      <form class="composer" id="chat-form">
+        <label class="sr-only" for="message-input">Policy question</label>
+        <textarea id="message-input" rows="1" maxlength="2000"
+                  placeholder="Ask about hotels, meals, receipts, mileage..."
+                  required></textarea>
+        <button class="send-button" id="send-button" type="submit">
+          <span>Send</span>
+          <span aria-hidden="true">&#8593;</span>
+        </button>
+      </form>
+      <div class="composer-footer">
+        <span id="character-count">0 / 2000</span>
+        <span>Answers cite the source policy</span>
+      </div>
+    </section>
+
+    <aside class="panel trace-panel" data-panel-name="trace"
+           aria-labelledby="trace-heading">
+      <div class="panel-header">
+        <div>
+          <span class="eyebrow">Processing proof</span>
+          <h2 id="trace-heading">Evidence trace</h2>
+        </div>
+        <span class="trace-status idle" id="trace-status">Ready</span>
+      </div>
+
+      <div class="trace-summary">
+        <div>
+          <span>Provider</span>
+          <strong id="provider-value">-</strong>
+        </div>
+        <div>
+          <span>Model</span>
+          <strong id="model-value">-</strong>
+        </div>
+        <div>
+          <span>Turn</span>
+          <strong id="turn-value">0</strong>
+        </div>
+        <div>
+          <span>Latency</span>
+          <strong id="latency-value">-</strong>
+        </div>
+      </div>
+
+      <section class="trace-section">
+        <h3>Retrieved evidence</h3>
+        <div class="empty-state" id="evidence-list">
+          Evidence sections will appear after a question.
+        </div>
+      </section>
+
+      <section class="trace-section">
+        <h3>Tool activity</h3>
+        <div class="empty-state" id="tool-list">
+          No tool used on this turn.
+        </div>
+      </section>
+
+      <section class="trace-section thread-section">
+        <h3>Conversation thread</h3>
+        <code id="thread-id"></code>
+      </section>
+    </aside>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="/app.js" defer></script>
+</body>
+</html>

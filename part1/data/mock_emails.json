@@ -1,0 +1,86 @@
+[
+  {
+    "case_id": "CASE-1001",
+    "customer_id": "CUST-042",
+    "customer_name": "Alicia Tan",
+    "customer_email": "alicia@example.com",
+    "subject": "Can I return my order?",
+    "body": "Hi, I received my order 10 days ago. The item is unused and still in the original packaging. Can I return it for a refund?",
+    "contact_count_last_7_days": 1,
+    "received_at": "2026-07-24T09:30:00+08:00",
+    "metadata": {
+      "order_id": "ORD-7781",
+      "product": "Nimbus Bottle"
+    }
+  },
+  {
+    "case_id": "CASE-1002",
+    "customer_id": "CUST-087",
+    "customer_name": "Marcus Lee",
+    "customer_email": "marcus@example.com",
+    "subject": "Charged twice for one order",
+    "body": "Hello, I think I was charged twice for the same order. One charge was yesterday and another charge showed up today. Can you help me check this?",
+    "contact_count_last_7_days": 2,
+    "received_at": "2026-07-24T10:05:00+08:00",
+    "metadata": {
+      "order_id": "ORD-8832",
+      "charge_amount": "59.90"
+    }
+  },
+  {
+    "case_id": "CASE-1003",
+    "customer_id": "CUST-118",
+    "customer_name": "Priya Shah",
+    "customer_email": "priya@example.com",
+    "subject": "Login issue on mobile app",
+    "body": "I cannot log in to the NimbusShop app. I already tried my usual password but it keeps showing an error message.",
+    "contact_count_last_7_days": 1,
+    "received_at": "2026-07-24T10:30:00+08:00",
+    "metadata": {
+      "device": "iPhone 15",
+      "app_version": "4.8.1"
+    }
+  },
+  {
+    "case_id": "CASE-1004",
+    "customer_id": "CUST-205",
+    "customer_name": "Daniel Wong",
+    "customer_email": "daniel@example.com",
+    "subject": "Possible data loss after app crash",
+    "body": "After the app crashed, my saved order details disappeared. I am worried this is data loss and I need someone to check my account.",
+    "contact_count_last_7_days": 1,
+    "received_at": "2026-07-24T11:15:00+08:00",
+    "metadata": {
+      "device": "Samsung Galaxy S25",
+      "app_version": "4.8.1"
+    }
+  },
+  {
+    "case_id": "CASE-1005",
+    "customer_id": "CUST-309",
+    "customer_name": "Nur Aisyah",
+    "customer_email": "aisyah@example.com",
+    "subject": "Still no answer about my package",
+    "body": "This is my fourth time contacting support this week. My package still has not arrived and I need a clear update.",
+    "contact_count_last_7_days": 4,
+    "received_at": "2026-07-24T12:00:00+08:00",
+    "metadata": {
+      "order_id": "ORD-9920",
+      "carrier": "Nimbus Express"
+    }
+  },
+  {
+    "case_id": "CASE-1006",
+    "customer_id": "CUST-411",
+    "customer_name": "Ethan Lim",
+    "customer_email": "ethan@example.com",
+    "subject": "Refund after 90 days?",
+    "body": "Can I get a refund after 90 days if I used the product only once? I could not find this exact case on your website.",
+    "contact_count_last_7_days": 1,
+    "received_at": "2026-07-24T13:20:00+08:00",
+    "metadata": {
+      "order_id": "ORD-4481",
+      "product": "Nimbus Mug"
+    }
+  }
+]
