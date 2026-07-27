@@ -14,7 +14,7 @@
 10. GroundedDraftSkill - Creates a customer reply using retrieved PDF information.
 11. RefundGuardrailSkill - Prevents refund claims that are not supported by the PDF.
 12. HumanReviewSkill - Prepares critical or unsupported cases for human review.
-## Tools
+## Tool
 13. PDFSearchTool - Searches the internal PDF.
 14. DaftBuilderTool - Builds a customer-facing reply.
 15. RefundEvidenceCheckTool - Checks refund statements against PDF information.
@@ -24,4 +24,14 @@
 18. DeepSeek Meaning Check - Detects serious issues written using different words.
 19. Refund Guardrail - Blocks refund replies that are unsupported by the PDF.
 
-# Part 2: Support Email Agent
+# Part 2: Web Content Summarizer
+## Workflow and Skill
+![Part 1 Workflow](diagram/part2_flow.png)
+1. LongContentChunkingSkill - Divides long webpage text into smaller sections.
+2. DeepSeekLLMSummarizationSkill - Uses DeepSeek to create a focused summary.
+3. GroundedSummarizationSkill - Creates a rule-based summary without an LLM API.
+## Tool
+4. URL Input Validation - Accepts only valid public webpage URLs
+5. WebsiteScraperTool - Downloads webpage HTML into memory.
+6. UsefulContentCleaner - Removes scripts, menus, advertisements and repeated content.
+7. ConciseSummaryGuardrail - Checks the word limit, repetition and whether the summary is supported by the webpage.
