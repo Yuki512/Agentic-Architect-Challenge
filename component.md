@@ -24,7 +24,7 @@
 18. DeepSeek Meaning Check - Detects serious issues written using different words.
 19. Refund Guardrail - Blocks refund replies that are unsupported by the PDF.
 
-# Part 2:  Technical Implementation
+# Part 2: Technical Implementation
 ## Workflow and Skill
 ![Part 2 Workflow](diagram/part2_flow.png)
 1. LongContentChunkingSkill - Divides long webpage text into smaller sections.
@@ -35,3 +35,11 @@
 5. WebsiteScraperTool - Downloads webpage HTML into memory.
 6. UsefulContentCleaner - Removes scripts, menus, advertisements and repeated content.
 7. ConciseSummaryGuardrail - Checks the word limit, repetition and whether the summary is supported by the webpage.
+
+# Part 3: Practical Evaluation
+## Workflow and Agent
+1. LangGraph - Controls the nodes, passes conversation state and handles tool routes.
+2. DocumentAgent - Answers questions using the sample policy PDF, conversation history and optional tools.
+3. DeepSeek - Reads the question, prepares the answer and decides whether a calculator or date tool is required.
+## Skill
+
