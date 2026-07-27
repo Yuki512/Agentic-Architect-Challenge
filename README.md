@@ -118,3 +118,20 @@ In this example, the user asks the system to list Tsuna and the six Vongola Guar
 
 # 3. Part 3 Practical Evaluation
 ![Part 3 Workflow](diagram/part3_demo.png)
+This example shows that the agent can answer questions from the PDF, remember the previous question and use a calculator when needed.
+
+- **Singapore hotel calculation**  
+  The user asks for the maximum room cost for four nights. The agent uses the PDF limit of S$240 per night and returns **S$960**.
+
+- **Direct PDF question**  
+  The user asks for the daily meal limit in Singapore. The agent finds the policy information and returns **S$80 per day**.
+
+- **Conversation memory**  
+  The user then asks, “What would that be for 3 days?” The agent remembers that “that” refers to the S$80 daily meal limit.
+
+- **Tool selection**  
+  DeepSeek decides that arithmetic is required and selects the calculator tool.
+
+
+ 
+
